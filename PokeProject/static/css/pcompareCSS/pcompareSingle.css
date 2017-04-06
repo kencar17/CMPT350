@@ -1,0 +1,50 @@
+/*---------Pokemon Single compare Style---------*/
+
+/* Padding position for search input*/
+.singleComparePosition {
+    padding-top: 15px;
+    padding-left: 160px;
+}
+
+/* Stats div left */
+.singleStatsLeft {
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+
+/* stats div right*/
+.singleStatsRight {
+    margin-left: 50%;
+    height: 250px;
+}
+
+/* svg title postion*/
+.singleTitlePostionLeft {
+    padding-left: 200px;
+}
+
+/* svg two title position*/
+.singleTitlePostionRight {
+   padding-left: 160px;
+    padding-top: 10px;
+}
+
+/* level slider position*/
+.singleSilderPosition {
+    padding-top: 140px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* slider text and label style*/
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+/*-------------------------------------------------------*/

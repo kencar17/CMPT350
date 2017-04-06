@@ -5,9 +5,10 @@
 {% block content %}
 <html lang="en">
 
-    <style>
-
-</style>
+<link rel="stylesheet" type="text/css" href="{% static "css/pcompareCSS/pcompareSingle.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/pcompareCSS/pcompareDouble.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/pcompareCSS/pcompareMulti.css" %}" />
+<link rel="stylesheet" type="text/css" href="{% static "css/pcompareCSS/commonCompare.css" %}" />
 
 <div class="tab">
     <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Single')"  id="defaultOpen">Single Lookup</a>
@@ -16,17 +17,17 @@
 </div>
 
 <div id="Single" class="tabcontent" style="background-color: white">
-    <div class="grad2">
-        <div class="singleImageFront" style="padding-left: 130px">
-            <img id="frontImg" style="width: 400px; height: 350px;" src="{% static "images/front/0.png" %}" alt="My image"/>
+    <div class="gradients">
+        <div class="imageFront" style="padding-left: 130px">
+            <img class="imageSize" id="frontImg" src="{% static "images/front/0.png" %}" alt="My image"/>
         </div>
-        <div class="singleImageBack" style="padding-left: 40px">
-            <img id="backImg" style="width: 400px; height: 350px" src="{% static "images/back/0.png" %}" alt="My image"/>
+        <div class="imageBack" style="padding-left: 40px">
+            <img class="imageSize" id="backImg" src="{% static "images/back/0.png" %}" alt="My image"/>
         </div>
     </div>
-    <div class="doublePokeStatsDiv">
+    <div class="pokemonStatsDiv">
         <div>
-            <div class="firstPoke">
+            <div class="pokeSearchLeft">
                 <div class="singleComparePosition">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search Pokemon" id="tags">
@@ -38,7 +39,7 @@
 
             </div>
 
-            <div class="secondPoke" style="font-family: sans-serif; font-size: 20px;">
+            <div class="pokeSearchRight fontAndSize">
                 <div id="radioBut" style="padding-top: 15px; padding-left: 150px">
                     <label class="radio-inline" id="normal">
                         <input id="checkNormal" type="radio" name="optradio" checked>Normal
@@ -50,10 +51,10 @@
             </div>
         </div>
 
-        <hr style="background-color: black">
+        <hr class="backBackground">
 
         <div>
-            <div class="fontStyleSinglePoke singleStatsLeft">
+            <div class="fontStyleAndPadding singleStatsLeft">
                 <div id="singleIndex">
                     Pokedex: <span id="pokedex"></span>
                 </div>
@@ -71,12 +72,12 @@
                 </div>
 
             </div>
-            <div class="singleStatsRight fontStyleSinglePoke">
+            <div class="fontStyleAndPadding singleStatsRight">
                 <div>
                     <div>
                         Type:
                     </div>
-                    <div style="padding-left: 60px" id="singleType">
+                    <div class="paddingTypes" id="singleType">
                         <span class="badge">None</span>
                     </div>
                 </div>
@@ -84,7 +85,7 @@
                     <div>
                         Super Effective Against:
                     </div>
-                    <div style="padding-left: 60px" id="singleStrong">
+                    <div class="paddingTypes" id="singleStrong">
                         <span class="badge">none</span>
                     </div>
                 </div>
@@ -92,18 +93,18 @@
                     <div>
                         Weak Against:
                     </div>
-                    <div style="padding-left: 60px" id="singleWeak">
+                    <div class="paddingTypes" id="singleWeak">
                         <span class="badge">none</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <hr style="background-color: black">
+        <hr class="backBackground">
 
         <!-- Radio buttons for bar graph-->
         <div>
-            <div id="radioBut2" class="singleBarRadio">
+            <div id="radioBut2" class="fontAndSize radioButtonBar">
                 <label class="radio-inline">
                     <input id="checkBar" type="radio" name="optradio2" value="bar" checked>Bar Chart
                 </label>
@@ -113,31 +114,29 @@
             </div>
         </div>
 
-        <hr style="background-color: black">
+        <hr class="backBackground">
 
         <!-- Svg bar graph div-->
 
-        <div style="height: 534px" >
+        <div class="svgDivHeight" >
             <div class="testLeft">
-                <h4 style="padding-left: 200px">Pokemon Stats</h4>
+                <h4 class="singleTitlePostionLeft">Pokemon Stats</h4>
                 <div id="singleChart">
-    {#                    <svg id="sChart"></svg>#}
 
                 </div>
             </div>
 
             <div class="testRight">
-                <h4 style="padding-left: 160px; padding-top: 10px">Derived Pokemon Stats</h4>
-
+                <h4 class="singleTitlePostionRight">Derived Pokemon Stats</h4>
                 <div id="singleChart2">
-    {#                    <svg id="sChart2"></svg>#}
+
                 </div>
             </div>
 
         </div>
 
-        <div style="padding-top: 140px; padding-left: 40px; padding-right: 40px">
-            <h3 style="padding-bottom: 10px;">Level</h3>
+        <div class="singleSilderPosition">
+            <h3 class="titleSilderPosition">Level</h3>
             <div id="slider">
                 <div id="custom-handle" class="ui-slider-handle"></div>
             </div>
@@ -150,15 +149,15 @@
 </div>
 
 <div id="Double" class="tabcontent" style="background-color: white">
-    <div class="grad" >
-        <div class="singleImageFront" style="padding-left: 146px">
-            <img id="frontImgDouble" style="width: 400px; height: 350px;" src="{% static "images/back/0.png" %}" alt="My image"/>
+    <div class="gradients" >
+        <div class="imageFront" style="padding-left: 146px">
+            <img class="imageSize" id="frontImgDouble"  src="{% static "images/back/0.png" %}" alt="My image"/>
         </div>
-        <div class="singleImageBack" style="padding-left: 56px">
-            <img id="frontImgDouble2" style="width: 400px; height: 350px" src="{% static "images/front/0.png" %}" alt="My image"/>
+        <div class="imageBack" style="padding-left: 56px">
+            <img class="imageSize" id="frontImgDouble2" src="{% static "images/front/0.png" %}" alt="My image"/>
         </div>
     </div>
-    <div class="doublePokeStatsDiv">
+    <div class="pokemonStatsDiv">
         <div>
             <div style="display: table; margin: 0 auto;">
                 <div id="radioBut4" class="doubleBarRadioImg">
@@ -172,10 +171,10 @@
             </div>
         </div>
 
-        <hr style="background-color: black">
+        <hr class="backBackground">
 
         <div>
-            <div class="firstPoke">
+            <div class="pokeSearchLeft">
                 <div class="doubleComparePosition">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search Pokemon" id="poke1">
@@ -185,7 +184,7 @@
                     </div>
                 </div>
             </div>
-            <div class="secondPoke">
+            <div class="pokeSearchRight">
                 <div class="doubleComparePosition">
                     <div class="input-group" style="text-align: center">
                         <input type="text" class="form-control" placeholder="Search Pokemon" id="poke2">
@@ -197,10 +196,10 @@
             </div>
         </div>
 
-        <hr style="background-color: black">
+        <hr class="backBackground">
 
         <div>
-            <div class="fontStyleSinglePoke doubleStatsLeft">
+            <div class="fontStyleAndPadding doubleStatsLeft">
                 <div id="singleIndex">
                     Pokedex: <span id="pokedexDouble"></span>
                 </div>
@@ -220,7 +219,7 @@
                     <div>
                         Type:
                     </div>
-                    <div style="padding-left: 60px" id="singleTypeDouble">
+                    <div class="paddingTypes" id="singleTypeDouble">
                         <span class="badge">None</span>
                     </div>
                 </div>
@@ -228,7 +227,7 @@
                     <div>
                         Super Effective Against:
                     </div>
-                    <div style="padding-left: 60px" id="doubleStrong">
+                    <div class="paddingTypes" id="doubleStrong">
                         <span class="badge">none</span>
                     </div>
                 </div>
@@ -236,13 +235,13 @@
                     <div>
                         Weak Against:
                     </div>
-                    <div style="padding-left: 60px" id="doubleWeak">
+                    <div class="paddingTypes" id="doubleWeak">
                         <span class="badge">none</span>
                     </div>
                 </div>
 
             </div>
-            <div class="doubleStatsRight fontStyleSinglePoke">
+            <div class="fontStyleAndPadding doubleStatsRight">
                 <div id="singleIndex">
                     Pokedex: <span id="pokedexDouble2"></span>
                 </div>
@@ -262,7 +261,7 @@
                     <div>
                         Type:
                     </div>
-                    <div style="padding-left: 60px" id="singleTypeDouble2">
+                    <div class="paddingTypes" id="singleTypeDouble2">
                         <span class="badge">None</span>
                     </div>
                 </div>
@@ -270,7 +269,7 @@
                     <div>
                         Super Effective Against:
                     </div>
-                    <div style="padding-left: 60px" id="doubleStrong2">
+                    <div class="paddingTypes" id="doubleStrong2">
                         <span class="badge">none</span>
                     </div>
                 </div>
@@ -278,7 +277,7 @@
                     <div>
                         Weak Against:
                     </div>
-                    <div style="padding-left: 60px" id="doubleWeak2">
+                    <div class="paddingTypes" id="doubleWeak2">
                         <span class="badge">none</span>
                     </div>
                 </div>
@@ -289,10 +288,10 @@
 
 
 
-        <hr style="background-color: black">
+        <hr class="backBackground">
 
         <div>
-            <div id="radioBut2" class="singleBarRadio doubleRadio1">
+            <div id="radioBut2" class="fontAndSize radioButtonBar doubleRadio1">
                 <label class="radio-inline">
                     <input id="checkBarDouble" type="radio" name="optradio3" checked>Bar Chart
                 </label>
@@ -300,7 +299,7 @@
                     <input type="radio" name="optradio3" id="doublePie">Pie Chart
                 </label>
             </div>
-            <div id="radioBut5" class="singleBarRadio doubleRadio2" onclick="">
+            <div id="radioBut5" class="fontAndSize radioButtonBar doubleRadio2" onclick="">
                 <label class="radio-inline" >
                     <input id="checkNormalD" type="radio" name="optradio5" value="normal" checked>Normal Status
                 </label>
@@ -310,10 +309,10 @@
             </div>
         </div>
 
-        <hr style="background-color: black">
+        <hr class="backBackground">
 
         <!-- Svg bar graph div-->
-        <div style="height: 534px" >
+        <div class="svgDivHeight" >
             <div class="testLeft">
                 <h4 style="padding-left: 230px" id="dPoke">Poke name</h4>
                 <div id="doubleChart" style="padding-left: 40px">
@@ -330,7 +329,7 @@
         </div>
 
         <div style="padding-top: 20px; padding-left: 40px; padding-right: 40px">
-            <h3 style="padding-bottom: 10px;">Level</h3>
+            <h3 class="titleSilderPosition">Level</h3>
             <div id="slider2">
                 <div id="custom-handle2" class="ui-slider-handle"></div>
             </div>

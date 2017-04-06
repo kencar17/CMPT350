@@ -1,0 +1,143 @@
+
+/*------------------- Tab style--------------------------*/
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 1224px;
+}
+
+/* Style the links inside the tab */
+div.tab a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+div.tab a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 1224px;
+    height: 1720px;
+}
+
+/*------------------- General Css -----------------------*/
+
+.gradients {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#6DF5E9, #57E142); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#6DF5E9, #57E142); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#6DF5E9, #57E142); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#6DF5E9, #57E142); /* Standard syntax */
+    height: 350px;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    border-radius: 5px;
+    border: 4px solid black;
+}
+
+/*-------------------------------------------------------*/
+
+
+/*------------------- General Css -----------------------*/
+
+/* Search input for poke in single and double tab*/
+.pokeSearchLeft {
+    width: 50%;
+    height: 50px;
+    float: left;
+
+}
+
+/* Search input for poke in double tab and radio buttons in single tab*/
+.pokeSearchRight {
+    margin-left: 50%;
+    height: 50px;
+}
+
+/* Image position in single and double tab (left)*/
+.imageFront {
+    width: 50%;
+    float: left;
+}
+
+/* Image position in single and double tab (right)*/
+.imageBack {
+    margin-left: 50%;
+}
+
+/* Pokemon image size*/
+.imageSize {
+    width: 400px;
+    height: 350px;
+}
+
+/* pokemon stats div in single and double tabs*/
+.pokemonStatsDiv {
+    background-color: #F0F0FF;
+    height: 1350px;
+    border-radius: 5px;
+    border: 4px solid black;
+}
+
+/* makes hr back throughout page*/
+.backBackground {
+    background-color: black
+}
+
+/* Font styling/ size and padding position in single and double stats div*/
+.fontStyleAndPadding {
+    font-family: sans-serif;
+    font-size: 22px;
+    padding-left: 160px;
+    padding-top: 15px;
+}
+
+/* Font and size*/
+.fontAndSize {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+/* Padding left for types in single and double tabs*/
+.paddingTypes {
+    padding-left: 60px;
+}
+
+/* Radio button style, bar graph and pie chart*/
+.radioButtonBar {
+    padding-top: 15px;
+    height: 50px;
+    padding-left: 160px;
+}
+
+/* Svg div height (Might be able to delete)*/
+.svgDivHeight {
+    height: 534px;
+}
+
+/*Silder title position*/
+.titleSilderPosition {
+    padding-bottom: 10px
+}
+
+/*-------------------------------------------------------*/
