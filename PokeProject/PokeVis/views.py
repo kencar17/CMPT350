@@ -226,11 +226,11 @@ def get_filtered_pokemon(request):
 
 
 def get_data(request):
-    pokemonDictionary = {"name": "Pokemon"}
+    pokemonDictionary = {"name": "Pokemon", "color": "#F0F0FF"}
     colorsDict = {"Fire": "#ff5d55", "Water": "#5382ea", "Grass": "#6cb649", "Bug": "#95a22c", "Ghost": "#5d4b7e",
                   "Electric": "#f2c735", "Fairy": "#e287e2", "Dragon": "#5b2eef", "Poison": "#933f93",
                   "Rock": "#a48f3a", "Steel": "#a7a8be", "Normal": "#99986a", "Fighting": "#a02a26",
-                  "Ground": "#d9b34a", "Psychic": "#f54378"}
+                  "Ground": "#d9b34a", "Psychic": "#f54378", "Ice": "#84cfcf", "Flying": "#9d88db", "Dark": "#5d483d"}
     tempGendict = []
     type = set()
     size = 1000
@@ -247,7 +247,7 @@ def get_data(request):
                 temp.append({"name": k.name, "pokeId": k.id, "size": size})
             tempTypeArray.append({"name": ty, "children": temp, "color": colorsDict[ty]})
 
-        tempGendict.append({"name": "Generation " + str(i), "children": tempTypeArray})
+        tempGendict.append({"name": "Generation " + str(i), "color": "#000000", "children": tempTypeArray})
 
         type.clear()
 
